@@ -1,0 +1,42 @@
+description = "Default site layout"
+==
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <link href="{{ [
+      'assets/dist/css/bootstrap.min.css',
+      'assets/carousel.css'
+    ]|theme }}" rel="stylesheet">
+    {% styles %}
+  </head>
+
+  <body style="padding-top:0px; padding-bottom:0px;">
+  
+  <header>
+    {% partial 'navbar' %}
+  </header>
+
+
+  <section id="page" class="container m-b-3">
+    {% page %}
+  </section>
+
+  {% partial 'footer' %}
+
+    <script src="{{ [
+      'assets/assets/js/jquery-3.2.1.slim.min.js',
+      'assets/assets/js/vendor/popper.min.js',
+      'assets/dist/js/bootstrap.min.js',
+      'assets/assets/js/vendor/holder.min.js'
+    ]|theme }}"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><//script>')</script>
+    {% framework extras %}
+    {% scripts %}
+  </body>
+</html>

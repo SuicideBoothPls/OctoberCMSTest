@@ -1,0 +1,85 @@
+title = "booking"
+url = "/booking"
+layout = "default"
+description = "Booking confirmation page"
+is_hidden = 0
+==
+<div class="container marketing" style="padding-top:30px;">
+        <div class="row">
+          <div>
+            <h1>Booking</h1>
+            <hr>
+          </div>
+        </div>
+        <div class="row" style="border:1px rgba(0,0,0,.2) solid; border-radius:16px; margin-bottom:25px; padding-top:25px; padding-bottom:25px">
+          <div class="col-lg-4">
+            <h2 style="text-align:center;">Easy walk 1</h2>
+            <br>
+            <img class="rounded-circle" src="{{ 'assets/images/thumb1.jpg'|theme }}" alt="Generic placeholder image" width="140" height="140">
+          </div>
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-md-11 order-md-1">
+                <h4 class="mb-3">Billing address</h4>
+                <form class="needs-validation" novalidate>
+                  <div class="row">
+                    <div class="col-md-12 mb-6">
+                      <label for="firstName">Group name</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Valid first name is required.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-5 mb-3">
+                      <label for="country">Region</label>
+                      <select class="custom-select d-block w-100" id="country" required>
+                        <option value="">Choose...</option>
+                        <option>Canterbury</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid country.
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="state">Area</label>
+                      <select class="custom-select d-block w-100" id="state" required>
+                        <option value="">Choose...</option>
+                        <option>Nelson</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="mb-4">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="same-address">
+                    <label class="custom-control-label" for="same-address">Have read Terms and Conditions</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="same-address">
+                    <label class="custom-control-label" for="same-address">Has own gear</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="save-info">
+                    <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                  </div>
+                  <br>
+                  <a button class="btn btn-primary btn-lg btn-block" href="{{ 'payment'|page }}">Continue to Payment <span class="sr-only">(current)</span></a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
